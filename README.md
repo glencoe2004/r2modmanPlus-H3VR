@@ -17,6 +17,7 @@
 - View and update any outdated mods
 - Edit configs directly from the manager
 - Auto-updates
+- Amogus
 - And more!
 
 ## What is a mod manager?
