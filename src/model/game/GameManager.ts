@@ -90,8 +90,10 @@ export default class GameManager {
         new Game("H3VR", "H3VR", "H3VR",
             "H3VR", ["h3vr.exe"], "h3vr_Data",
             "https://h3vr.thunderstore.io/api/v1/package/", "https://raw.githubusercontent.com/ebkr/r2modmanPlus/master/modExclusions.md",
-            [new StorePlatformMetadata(StorePlatform.STEAM, "450540")], "H3VR.png",
-            GameSelectionDisplayMode.VISIBLE, GameInstanceType.GAME, PackageLoader.BEPINEX, ["Hot Dogs, Horseshoes & Hand Grenades", "Hot Dogs, Horseshoes and Hand Grenades"]),
+            [
+                new StorePlatformMetadata(StorePlatform.STEAM, "450540"),
+                new StorePlatformMetadata(StorePlatform.OTHER)
+            ], "H3VR.png", GameSelectionDisplayMode.VISIBLE, GameInstanceType.GAME, PackageLoader.BEPINEX, ["Hot Dogs, Horseshoes & Hand Grenades", "Hot Dogs, Horseshoes and Hand Grenades"]),
 
         new Game("ROUNDS", "ROUNDS", "ROUNDS",
             "ROUNDS", ["Rounds.exe"], "Rounds_Data",
