@@ -10,15 +10,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - kind: linux
-            os: ubuntu-latest
-            platform: linux
           - kind: windows
             os: windows-latest
             platform: win
-          - kind: mac
-            os: macos-11
-            platform: osx
+            
     steps:
       - uses: actions/checkout@v3
 
@@ -59,3 +54,12 @@ jobs:
         uses: actions/github-script@v6
         with:
           script: core.setFailed('It seems the build process failed silently. See previous step for more info.')
+          
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact
+          path: D:/a/r2modmanPlus-H3VR/r2modmanPlus-H3VR
+          if-no-files-found: warn
+          retention-days: 0
+          compression-level: 6
